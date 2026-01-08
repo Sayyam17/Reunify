@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reunify - Edit Memories Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg-start': '#0f172a',
+              'brand-bg-end': '#1e293b',
+              'brand-primary': '#8b5cf6',
+              'brand-primary-hover': '#7c3aed',
+              'brand-secondary': '#6366f1',
+              'brand-secondary-hover': '#4f46e5',
+              'brand-text': '#f8fafc',
+              'brand-light': '#ffffff',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
+              'pop-in': 'popIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards',
+              'background-pan': 'backgroundPan 15s ease infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              popIn: {
+                '0%': { opacity: '0', transform: 'scale(0.96)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              backgroundPan: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

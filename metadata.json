@@ -1,0 +1,7 @@
+{
+  "name": "Reunify Photo Editor",
+  "description": "Creating moments of connection through AI photo editing.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
